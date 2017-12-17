@@ -179,7 +179,6 @@
         }
         this.ctx.restore();
       };
-
       Camera.prototype.drawColumns = function(player, map) {
         this.ctx.save();
         for (var column = 0; column < this.resolution; column++) {
@@ -210,7 +209,7 @@
 
         for (var s = ray.length - 1; s >= 0; s--) {
           var step = ray[s];
-          var rainDrops = Math.pow(Math.random(), 3) * s;
+          var rainDrops = 0; //Math.pow(Math.random(), 3) * s;
           var rain = (rainDrops > 0) && this.project(0.1, angle, step.distance);
 
           if (s === hit) {
